@@ -1,0 +1,154 @@
+:root {
+    --fuente-principal: "Mostra Nuova W00 Regular", sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111111;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    font-family: var(--fuente-principal);
+}
+
+body {background: 
+        
+        linear-gradient(135deg, rgba(20, 20, 26, 1.95), #2a3533ca),
+        
+        url('img/romm_1-112323.webp') center center no-repeat fixed;
+
+    
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: goldenrod;
+}
+
+p {
+    color: rgb(255, 38, 0);
+}
+
+h3 {
+    color: red;
+}
+
+/* --- FUENTE EN TODO EL CONTENIDO --- */
+
+h1, h2, h3, p, a, button, input, textarea, select {
+    font-family: inherit;
+}
+/* --- MURO DE PROPAGANDA --- */
+
+.muro-propaganda {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.3;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 15px 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.muro-propaganda span {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+
+.contenido-principal {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* --- TARJETAS --- */
+
+.tarjeta {
+    margin: 25px auto;
+}
+
+.tarjeta img,
+.contenido-principal img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+}
+
+.tarjeta a {
+    text-decoration: none;
+}
+
+.tarjeta h3 {
+    transition: color 0.2s ease;
+}
+
+.tarjeta a:hover h3 {
+    color: goldenrod;
+}
+
+/* --- IMÁGENES ADAPTABLES --- */
+
+.imagen-adaptable {
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+/* --- MÓVILES --- */
+
+@media (max-width: 600px) {
+    .contenido-principal {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+    .muro-propaganda span {
+        font-size: 2rem;
+    }
+
+    .muro-propaganda {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+        gap: 10px 2px;
+    }
+
+    .imagen-adaptable {
+        height: 250px;
+        margin: 15px auto;
+    }
+}
